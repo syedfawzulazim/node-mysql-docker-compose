@@ -2,8 +2,10 @@ import express from 'express'
 
 const app = express()
 
+const PORT = process.env.PORT || 8000
+
 app.get("/", (req,res) => {
-    res.send("Hello World")
+    res.send("Hello World1!!!")
 })
 
-app.listen(3000, () => console.log('Server Running at 3000!!'))
+app.listen(PORT, () => console.log(`Server Running at ${PORT}`))

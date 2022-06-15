@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: node_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: yarn dev
+    expose:
+      - 8000
+    environment:
+      VIRTUAL_HOST: 'node-app.docker'
+
+    
