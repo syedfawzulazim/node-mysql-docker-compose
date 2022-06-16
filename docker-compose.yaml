@@ -1,6 +1,18 @@
 version: '3.8'
 
 services:
+  db:
+    image: mysql:latest
+    container_name: mysql_db
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+    ports:
+      - '3307:3306'
+    volumes:
+      - mysql-data:/var/lib/mysql
   app:
     container_name: node_app
     build:
@@ -12,8 +24,11 @@ services:
     environment:
       VIRTUAL_HOST: 'node-app.docker'
     env_file:
-      - .env
+      - '.env'
     volumes:
-      - .:/usr/src/app
+      - '.:/usr/src/app'
+
+volumes:
+  mysql-data:
 
     
