@@ -8,8 +8,12 @@ services:
       dockerfile: Dockerfile
     command: yarn dev
     expose:
-      - 8000
+      - ${PORT}
     environment:
       VIRTUAL_HOST: 'node-app.docker'
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app
 
     
