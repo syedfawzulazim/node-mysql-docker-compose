@@ -22,4 +22,4 @@ COPY --from=builder /usr/src/app/package.json ./package.json
 COPY --from=builder /usr/src/app/tsconfig.json ./tsconfig.json
 COPY --from=builder /usr/src/app/node_modules ./node_modules
 
-CMD ["yarn", "dev"]
+CMD ["node", "./dist/index.js"]
