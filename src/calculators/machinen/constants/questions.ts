@@ -1,0 +1,7 @@
+export const NUMBER_OF_PREVIOUS_CLAIMS_QUESTION = 'number-of-previous-claims'
+export const PREVIOUS_DAMAGE_SUM_QUESTION = 'previous-damage-sum'
+export const MACHINE_TYPE_QUESTION = 'machine-type'
+export const MACHINE_GROUP_QUESTION = 'manchine-group'
+export const CONSTRUCTION_YEAR_QUESTION = 'construction-year'
+export const INSURANCE_SUM_QUESTION = 'insurance-sum'
+export const DEDUCTIBLE_QUESTION = 'deductible'
