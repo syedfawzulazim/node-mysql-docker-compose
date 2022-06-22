@@ -33,7 +33,7 @@ User.init(
     },
   },
   {
-    tableName: 'rates',
+    tableName: 'users',
     sequelize,
   },
 )
