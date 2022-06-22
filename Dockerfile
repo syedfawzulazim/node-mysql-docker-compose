@@ -17,7 +17,6 @@ WORKDIR /usr/src/app
 
 #copy from builder image
 COPY --from=builder /usr/src/app/dist ./dist
-COPY --from=builder /usr/src/app/src/index.ts ./src/index.ts
 COPY --from=builder /usr/src/app/package.json ./package.json
 COPY --from=builder /usr/src/app/tsconfig.json ./tsconfig.json
 COPY --from=builder /usr/src/app/node_modules ./node_modules
